@@ -11,7 +11,6 @@
 </style>
 <div id="scene"></div>
 <div id="shade"></div>
-<div id="trigger"></div>
 
 <?php
 foreach ($categories as $c) {
@@ -40,7 +39,7 @@ foreach ($categories as $c) {
 
     var SCENE = 'static/photospheres/hangar.jpg';
 
-    $('#trigger').click(function(){
+    $('.grow').click(function(){
         $(".grow").toggleClass("grow-big");
     });
 </script>
