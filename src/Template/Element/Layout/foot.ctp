@@ -6,6 +6,7 @@ $this->append('script', $this->Html->script([
     'threejs/StereoEffect',
     'threejs/DeviceOrientationControls',
     'threejs/OrbitControls',
+    'screenfull.min',
     'has',
     'DetectScreenSize',
     'Kaikai',
