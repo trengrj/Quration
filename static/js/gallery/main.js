@@ -51,17 +51,18 @@ var SCALE = 3;
         this.raycaster = new THREE.Raycaster();
     }
 
-    var RADIUS = 4 * SCALE;
+    var RADIUS = 6 * SCALE;
 
     function addDemos(demos) {
         this.intersectables = [];
-        var hl = demos.length / 3.0;
+        var hl = 4.25;
         for (var i = 0; i < demos.length; i++) {
             var demo = new Demo(demos[i]);
             window.demo = demo;
             var theta = (i + hl) * 0.3;
             demo.position.x = RADIUS * Math.cos(theta);
             demo.position.z = RADIUS * Math.sin(theta);
+            demo.position.y = -3;
             demo.lookAt(kaikai.camera.position);
             this.add(demo);
             this.intersectables.push(demo.children[0]);
@@ -103,7 +104,7 @@ var SCALE = 3;
         if (image_url) {
             image_url = '/proxy?url=' + encodeURIComponent(image_url) + '&resize=1';
         } else {
-            image_url = '/static/photospheres/beach2.jpg';
+            image_url = '/static/photospheres/hangar.jpg';
         }
         var sphere = new THREE.Mesh(
             new THREE.SphereGeometry(100, 20, 20),
