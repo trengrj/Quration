@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white
+}
+@media (min-width: 767px) {
+    .navbar-default {
+        background-color: transparent;
+        border: none
+    }
+    .navbar-default .navbar-nav>li>a {
+        background-color: transparent
+    }
+    .navbar-fixed-top {
+        position: absolute
+    }
+}
+html,
+body {
+    height: 100%
+}
+@font-face {
+    font-family: 'montserrat_bold';
+    src: url("../fonts/montserrat-bold-webfont.eot");
+    src: url("http://www.classhopper.com.au/fonts/montserrat-bold-webfont.eot%3F") format("embedded-opentype"), url("../fonts/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat-bold-webfont.ttf") format("truetype"), url("../fonts/montserrat-bold-webfont.svg") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+@media (min-width: 768px) {
+    h1.headtext {
+        font-family: "montserrat_bold";
+        font-size: 40px;
+        letter-spacing: 4px;
+        line-height: 1.3em;
+        text-align: center;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        -webkit-text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2)
+    }
+}
+@media (min-width: 800px) {
+    div.content {
+        width: 50%;
+        margin: auto
+    }
+}
+@media (max-width: 300px) {
+    h1.headtext {
+        font-family: "montserrat_bold";
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 1.1em;
+        margin-bottom: 00px;
+        margin: 100px auto 20px;
+        width: 90%;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        -webkit-text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2)
+    }
+}
+section {
+    padding-top: 160px;
+    padding-bottom: 20px;
+    min-height: 100%;
+    color: white
+}
+#section1 {
+    background: url("../images/bg/bg-home.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+div.form {
+    margin-top: 100px
+}
+.form input {
+    min-height: 49px;
+    min-width: 300px;
+    font-size: 18px;
+    margin: 10px;
+    padding: 5px 3px 5px 15px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    color: white;
+    outline: none
+}
+::-webkit-input-placeholder {
+    color: #ffffff
+}
+::-moz-placeholder {
+    color: #ffffff
+}
+:-ms-input-placeholder {
+    color: #ffffff
+}
+input:-moz-placeholder {
+    color: #ffffff
+}
+#section2 {
+    background: url("../images/gray-bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+#section3 {
+    background: url("../images/purple-bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+#section4 {
+    /*background: url("../images/white-bg.jpg") no-repeat center center;*/
+    background-color: #B7D5E5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: black;
+    padding-top: 120px !important
+}
+#section4 input::-webkit-input-placeholder {
+    color: black !important
+}
+#section4 input:-moz-placeholder {
+    color: black !important
+}
+#section4 input::-moz-placeholder {
+    color: black !important
+}
+#section4 input:-ms-input-placeholder {
+    color: black !important
+}
+#section4 input {
+    border: 2px solid black;
+    color: black
+}
+#section5 {
+    background-color: #333333;
+    padding-top: 10px !important;
+    padding-top: 10px !important
+}
+#section6 {
+    padding-top: 120px;
+    background-color: #B7D5E5
+}
+div.studios {
+    margin-top: 60px
+}
+strong {
+    font-size: 15px;
+    text-transform: uppercase;
+    opacity: 0.3
+}
+div.spacer {
+    margin-top: 20px
+}
+div.box {
+    min-height: 300px;
+    background-color: #e8e8e8;
+    color: black
+}
+#sec-6-1 {
+    background: url("../images/faq1.png") no-repeat;
+    background-size: 300px;
+    background-position: 20% -330%;
+    background-color: #e8e8e8;
+    padding: 120px 30px 10px 30px
+}
+#sec-6-2 {
+    background: url("../images/faq2.png") no-repeat;
+    background-size: 165px;
+    background-position: 100% 0;
+    padding: 60px 30px 10px 30px;
+    background-color: white
+}
+#sec-6-3 {
+    background: url("../images/faq3.png") no-repeat;
+    background-size: 165px;
+    background-position: 100% 0;
+    padding: 80px 30px 10px 30px;
+    background-color: #e8e8e8
+}
+.srow {
+    -moz-column-width: 18em;
+    -webkit-column-width: 18em;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em
+}
+.menu-category {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 1rem;
+    width: 100%
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    background-color: #41ccb3;
+    border-color: #41ccb3
+}
+a.list-group-item,
+a.list-group-item:hover,
+a.list-group-item:focus {
+    background-color: transparent;
+    color: white
+}
+div.faq {
+    margin-right: -30px;
+    margin-left: -30px
+}
+
+
+.navlogo {
+	height: 100px;
+	width: auto;
+}
+
+.studio-entry {
+    height: 250px;
+    background-color: orange;
+    border: 1px solid black;
+}
+
+.studio-entry h3 {
+    text-align: right;
+    position: relative;
+}

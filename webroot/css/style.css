@@ -1,0 +1,627 @@
+
+
+/*Navigation bar*/
+.navbar, .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+	background-color: white;
+	color: rgb(51, 150, 209);
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
+	color: #ffcf10;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: rgb(51, 150, 209);
+}
+
+.navbar-default .navbar-toggle:hover {
+  background-color: #ffcf10;
+}
+
+@media (min-width: 800px) { /*Disable horizontal scrolling when on a large screen*/
+	html, body {
+    	max-width: 100%;
+    	overflow-x: hidden;
+	}
+}
+
+li.navbar_trial > a {
+	border: 3px solid #ffcf10;
+	border-radius: 20px;
+	background-color: transparent;
+	padding: 5px 10px;
+	margin-top: 8px;
+}
+
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	  color: rgb(51, 150, 209);
+	}
+}
+
+/*header*/
+.header {
+	height: 100vh;
+	width: 100vw;
+	background-image: url('../img/purple-bg.jpg');
+	background-size: cover;
+	text-align: center;
+	margin: 0;
+	position: relative;
+}
+
+.header-form {
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	z-index: 100;
+	margin: auto;
+    top: 50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%) translateY(-50%); /* Chrome, Safari, Opera */
+    min-width: 90%;
+}
+
+.header-form .form-group {
+    margin-top: 0;
+}
+
+input.tt-hint {
+	display:none !important;
+}
+
+input#suburb {
+	background-color: white !important;
+}
+
+@media screen and (min-width: 800px){
+
+	.header-form h1, .header-form h2, .header-form h3 {
+		color: white;
+	}
+
+}
+
+@media screen and (max-width: 800px){
+
+	.header-form h1, .header-form h2, .header-form h3 {
+		color: white;
+		font-size: 1.5em;
+	}
+
+	.hiding {  /*Don't delete this! VERY IMPORTANT FOR OTHER PARTS OF THE PAGE*/
+		display: none;
+	}
+}
+
+@media screen and (max-width: 361px) {   /*MOBILE SCREEN FORM*/
+	/*.header-form {
+		position: absolute;
+		margin: 0;
+		left: 10px;
+		top: 0;
+	}*/
+}
+
+.headtext span, .features span {
+	color: #ffcf10;
+}
+
+/*class list for tomorrow*/
+
+.index-classes {
+	width: 100%;
+	height: 250px;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	position: relative;
+
+}
+
+.index-classes h3 {
+	position: absolute;
+    bottom: 0;
+    left: 5px;
+    color: white;
+  }
+
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #ffcf10;
+  border-color: none;
+  color: white;
+}
+
+.features {
+	height: 90vh;
+	width: 100%;
+	background-image: url('../img/run-dark.jpg');
+	background-size: cover;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	padding: 50px;
+	margin: 0;
+	display: table;
+}
+
+
+.features .button {
+	background-color: rgb(119, 192, 75);
+	border-radius: 3px;
+	color: white;
+    padding: 10px 20px;
+    font-size: 1.5em;
+}
+
+.feature_text {
+	position: relative;
+	vertical-align: middle;
+	margin: auto;
+	height: 100%;
+}
+
+@media screen and (min-width: 800px){
+	.feature_text {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.feature_text {
+		width: 100%;
+	}
+}
+
+/* Index Map*/
+
+.indexmap {
+	background-color: #B7D5E5;
+	height: 100vh;
+	display: table;
+	width: 100vw;
+	overflow: hidden;
+}
+.cities {
+	text-align: center;
+}
+
+.cities .btn {
+	color: rgb(51, 150, 209);
+	/*margin-bottom: 10px;*/
+	padding: 8px 10px;
+	text-align: center;
+	font-size: 1.1em;
+	border: 1px solid rgb(51, 150, 209);
+	background-color: white;
+	display: inline;
+}
+
+
+/*How It Works - index*/
+
+
+
+.indexExplain {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	background: #f7ab8a;
+	margin: 0;
+	display: table;
+	color: white;
+}
+
+.indexExplain .headtext {
+	text-shadow: 1px 1px 1px black;
+}
+
+.indexHowCol {
+	color: white;
+	text-align: center;
+}
+
+.indexHowCol h4 {
+	position: absolute;
+	display: table-cell;
+	text-shadow: 1px 1px 1px grey;
+}
+
+@media screen and (min-width: 800px){
+	.indexHowCol {
+		height: 60vh;
+		margin-bottom: 20px;
+
+	}
+
+	.indexHowCol h4 {
+		top: 30%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.indexHowCol {
+		height: 25vh;
+		margin-bottom: 5px;
+	}
+
+	.indexHowCol h4 {
+		top: 0;
+	}
+
+}
+
+.indexExplain .button {
+	background-color: rgb(119, 192, 75);
+	border-radius: 3px;
+	color: white;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    margin: 0 auto;
+
+}
+
+
+.indexHowCol-1 {
+	background: url('../img/yogamat1.jpg');
+	background-size: cover;
+}
+
+.indexHowCol-2 {
+	background: url('../img/iphone.jpg');
+	background-size: cover;
+}
+
+.indexHowCol-3 {
+	background: url('../img/schedule.jpg');
+	background-size: cover;
+}
+
+.indexHowCol-4 {
+	background: url('../img/yogaclass_slim.jpg');
+	background-size: cover;
+}
+
+.action_buttons {
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+
+/*Pricing index page*/
+.indexPricing {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	background-image: url('../img/emptyclass.jpg');
+	background-size: cover;
+	margin: 0;
+	display: table
+}
+
+.indexPricing .headtext{
+	color: white;
+	text-shadow: 2px 2px 2px #475975;
+}
+
+/*Search page*/
+.search-bar {
+	text-align: center;
+}
+
+.results {
+	width: 100vw;
+	height: 40vh;
+	display: inline-table;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+}
+
+/*large screen*/
+@media screen and (min-width: 800px){
+
+	.map {
+		width: 100%;
+		/*background-color: black;*/
+		position: relative;
+		left: 0;
+	}
+
+	.classtable {
+		width: 100%;
+		position: relative;
+		right: 0;
+	}
+
+}
+
+/*Small screen*/
+@media screen and (max-width: 800px){
+
+	.map {
+		width: 100%;
+		height: 100px;
+	}
+
+	.classtable {
+		width: 100%;
+		position: relative;
+		right: 0;
+	}
+}
+
+.classtable * {
+	text-align: center;
+}
+
+/*Profile page*/
+.profile-pic {
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+}
+
+.profile-button {
+	background-color: rgb(51, 150, 209);
+	border-radius: 3px;
+	color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+#calendar {
+	min-height: 100vh;
+}
+
+/*FAQ*/
+
+.panel-default>.panel-heading {
+	background-color: rgb(51, 150, 209);
+}
+
+.headtext {
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+
+/*How It Works Page */
+
+.studio_contact {
+	text-align: center
+}
+.studio_contact_button {
+	background-color: rgb(119, 192, 75);
+	border-radius: 3px;
+	color: white;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    margin: auto;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+}
+
+/*Pricing - plan */
+
+#plans,#plans ul,#plans ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#plans {
+	padding: 5px;
+}
+
+#planContainer .options li {
+	margin: 10px;
+}
+
+#pricePlans:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+#pricePlans {
+	zoom: 1;
+}
+
+#pricePlans {
+	max-width: 69em;
+	margin: 0 auto;
+}
+
+
+#pricePlans #plans .plan {
+	background: #fff;
+	float: left;
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
+	margin: 0 0 20px 0;
+
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.planContainer .title h2 {
+	font-size: 2;
+	font-weight: 300;
+	color: #3e4f6a;
+	margin: 0;
+	padding: .6em 0;
+}
+
+.planContainer .title h2.bestPlanTitle {
+	background: #3e4f6a;
+
+	background: -webkit-linear-gradient(top, #475975, #364761);
+	background: -moz-linear-gradient(top, #475975, #364761);
+	background: -o-linear-gradient(top, #475975, #364761);
+	background: -ms-linear-gradient(top, #475975, #364761);
+	background: linear-gradient(top, #475975, #364761);
+	color: #fff;
+	border-radius: 5px 5px 0 0;
+}
+
+
+.planContainer .price p {
+	background: #3e4f6a;
+
+	background: -webkit-linear-gradient(top, #475975, #364761);
+	background: -moz-linear-gradient(top, #475975, #364761);
+	background: -o-linear-gradient(top, #475975, #364761);
+	background: -ms-linear-gradient(top, #475975, #364761);
+	background: linear-gradient(top, #475975, #364761);
+	color: #fff;
+	font-size: 0.9em;
+	font-weight: 700;
+	height: 2.6em;
+	line-height: 2.6em;
+	margin: 0 0 1em;
+}
+
+.planContainer .price p.bestPlanPrice {
+	background: #f7814d;
+}
+
+.planContainer .price p span {
+	color: #8394ae;
+}
+
+.planContainer .options {
+	margin-top: 10em;
+}
+
+/*.planContainer .options li  {
+	font-weight: 700;
+	color: #364762;
+}*/
+
+.planContainer .options li{
+	font-weight: 400;
+	color: #979797;
+	line-height: 2.5;
+
+}
+
+.planContainer .button a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #3e4f6a;
+	font-weight: 700;
+	letter-spacing: 3px;
+	line-height: 2.8em;
+	border: 2px solid #3e4f6a;
+	display: inline-block;
+	width: 80%;
+	height: 2.8em;
+	border-radius: 4px;
+	margin: 1.5em 0 1.8em;
+}
+
+.planContainer .button a.bestPlanButton {
+	color: #fff;
+	background: #f7814d;
+	border: 2px solid #f7814d;
+}
+
+#credits {
+	text-align: center;
+	font-size: .8em;
+	font-style: italic;
+	color: #777;
+}
+
+#credits a {
+	color: #333;
+}
+
+#credits a:hover {
+	text-decoration: none;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+#pricePlans #plans .plan {
+	width: 49%;
+	margin: 0 2% 20px 0;
+}
+
+#pricePlans #plans > li:nth-child(2n) {
+	margin-right: 0;
+}
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+#pricePlans #plans .plan {
+	width: 49%;
+	margin: 0 2% 20px 0;
+}
+
+#pricePlans #plans > li:nth-child(2n) {
+	margin-right: 0;
+}
+
+}
+
+@media screen and (min-width: 1025px) {
+
+#pricePlans {
+	margin: 2em auto;
+}
+
+#pricePlans #plans .plan {
+	width: 45%;
+	margin: 0 1.33% 20px 0;
+
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+
+#pricePlans #plans > li:last-child {
+	margin-right: 0;
+}
+
+#pricePlans #plans .plan:hover {
+	-webkit-transform: scale(1.04);
+	   -moz-transform: scale(1.04);
+	    -ms-transform: scale(1.04);
+	     -o-transform: scale(1.04);
+	        transform: scale(1.04);
+}
+
+.planContainer .button a {
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+
+.planContainer .button a:hover {
+	background: #3e4f6a;
+	color: #fff;
+}
+
+.planContainer .button a.bestPlanButton:hover {
+	background: #ff9c70;
+	border: 2px solid #ff9c70;
+}
+
+}
+
+
