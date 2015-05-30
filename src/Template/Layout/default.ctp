@@ -7,7 +7,7 @@ use Users\Model\Entity\User;
 <!DOCTYPE html>
 <html lang="en">
 <?= $this->Element('Layout' . DS . 'head') ?>
-<body>
+<body class="<?= ($stereo ? ' stereo' : '') ?>">
 
     <?php echo $this->fetch('content'); ?>
 

@@ -42,6 +42,12 @@ class AppController extends Controller
 
         $this->loadComponent('Flash');
         $this->loadComponent('RequestHandler');
+
+        $session = $this->request->session();
+        if (isset($this->request->query['stereo'])) {
+            $session->write('stereo', (bool) $this->request->query['stereo']);
+        }
+        $this->set('stereo', $session->read('stereo'));
     }
 
     public function beforeRender(Event $event)

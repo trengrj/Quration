@@ -25,6 +25,10 @@ body {
         margin: 0;
     }
 
+body.stereo .info {
+    display: none;
+}
+
 #trigger {
     position: absolute;
     right: 0;

@@ -37,7 +37,7 @@ foreach ($categories as $c) {
         });
     }
 
-    var SCENE = 'static/photospheres/hangar.jpg';
+    var SCENE = 'static/photospheres/sky.jpg';
 
     $('.grow').click(function(){
         $(".grow").toggleClass("grow-big");

@@ -220,7 +220,8 @@ var SCALE = 3;
 
 var kaikai, gallery, cursor;
 
-var STEREO = (window.location.hash == "#stereo") ? true : false;
+//var STEREO = (window.location.hash == "#stereo") ? true : false;
+var STEREO = $('body').hasClass('stereo');
 
 function setup() {
 
