@@ -26,7 +26,7 @@ var SCALE = 3;
         this.slug = info.slug;
         this.href = info.href;
 
-        var geometry = new THREE.PlaneGeometry(this.width, this.height);
+        var geometry = new THREE.PlaneGeometry((info.slug == "back") ? 12 : this.width, (info.slug == "back") ? 12 : this.height);
         var texture = THREE.ImageUtils.loadTexture(info.preview);
         var material = new THREE.MeshBasicMaterial({map: texture, transparent: true});
         var plane = new THREE.Mesh(geometry, material);
@@ -54,20 +54,34 @@ var SCALE = 3;
     var RADIUS = 6 * SCALE;
 
     function addDemos(demos) {
-        this.intersectables = [];
-        var hl = 4.25;
-        for (var i = 0; i < demos.length; i++) {
-            var demo = new Demo(demos[i]);
-            window.demo = demo;
-            var theta = (i + hl) * 0.3;
-            demo.position.x = RADIUS * Math.cos(theta);
-            demo.position.z = RADIUS * Math.sin(theta);
-            demo.position.y = -3;
-            demo.lookAt(kaikai.camera.position);
-            this.add(demo);
-            this.intersectables.push(demo.children[0]);
-        }
+      this.intersectables = [];
+      var hl = 1.25;
+      for (var i = 0; i < demos.length; i++) {
+        var demo = new Demo(demos[i]);
+        window.demo = demo;
+        var theta = (i + hl) * 0.3;
+        demo.position.x = RADIUS * Math.cos(theta);
+        demo.position.z = 5+ RADIUS * Math.sin(theta);
+        demo.position.y = -2;
+        demo.lookAt(kaikai.camera.position);
+        this.add(demo);
+        this.intersectables.push(demo.children[0]);
+      }
     }
+
+    function addBack(demos) {
+      var hl = 1.25;
+      var demo = new Demo(back);
+      window.demo = demo;
+      var theta = (4 + hl) * 0.3;
+      demo.position.x = RADIUS * Math.cos(theta);
+      demo.position.z = RADIUS * Math.sin(theta) -2;
+      demo.position.y = -25;
+      demo.lookAt(kaikai.camera.position);
+      this.add(demo);
+      this.intersectables.push(demo.children[0]);
+    }
+
 
     function setupSkybox() {
         var skyBoxTexture = THREE.ImageUtils.loadTextureCube([
@@ -123,6 +137,7 @@ var SCALE = 3;
 
         lookToClick.bind(this)();
         addDemos.bind(this)(demos);
+        addBack.bind(this)(demos);
 
         // skybox
         setupPhotosphere.bind(this)();
@@ -232,3 +247,43 @@ var SCALE = 3;
     root.Cursor = Cursor;
 
 })();
+
+
+var kaikai, gallery, cursor;
+
+var STEREO = (window.location.hash == "#stereo") ? true : false;
+
+function setup() {
+
+  kaikai = new Kaikai();
+
+  gallery = new Gallery(DEMOS);
+  kaikai.scene.add(gallery);
+
+  cursor = new Cursor();
+  kaikai.camera.add(cursor);
+  cursor.position.z = -3 * SCALE;
+  cursor.lookAt(kaikai.camera.position);
+
+  if (STEREO) {
+    kaikai.effect.separation = 0.6;
+  }
+
+  if (!has.mobile) {
+    setTimeout(function() {
+      kaikai.orbitControls.target.set(0,0.3,1);
+    },0);
+  }
+
+  kaikai.update = function() {
+    Kaikai.prototype.update.call(this);
+    gallery.update();
+  };
+
+  document.getElementById('scene').appendChild(kaikai.renderer.domElement);
+
+}
+
+setup();
+
+

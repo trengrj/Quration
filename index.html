@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Quration</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <head>
+    <title>Quration</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
     <!-- Sharing -->
     <meta name="name" content="Kaikai">
@@ -28,14 +28,22 @@
     <meta property="og:site_name" content="Kaikai">
     <meta property="og:description" content="A virtual reality Chrome Experiment for Kaikai.">
 
-
-  <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<style>
-    body {
-      margin: 0px;
-      background-color: #000;
-      overflow: hidden;
-		}
+    <style>
+@font-face {
+    font-family: 'Flama-Light';
+    src: url('static/fonts/flama-light-webfont.eot');
+    src: url('static/fonts/flama-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('static/fonts/flama-light-webfont.woff') format('woff'),
+         url('static/fonts/flama-light-webfont.ttf') format('truetype'),
+         url('static/fonts/flama-light-webfont.svg#flamalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  margin: 0px;
+  background-color: #000;
+  overflow: hidden;
+}
     #shade, #scene {
       position: absolute;
       top: 0;
@@ -53,95 +61,83 @@
       transition: all 1s ease-in-out;
       pointer-events: none;
     }
-	</style>
-</head>
+    </style>
+  </head>
 <body>
 
 <div id="scene"></div>
 <div id="shade"></div>
 
-<script src="/static/js/third-party/threejs/three.min.js"></script>
-<script src="/static/js/third-party/threejs/StereoEffect.js"></script>
-<script src="/static/js/third-party/threejs/DeviceOrientationControls.js"></script>
-<script src="/static/js/third-party/threejs/OrbitControls.js"></script>
-
-<script src="/static/js/third-party/has.js"></script>
-
-<script src="/static/js/DetectScreenSize.js"></script>
-<script src="/static/js/Kaikai.js"></script>
-
-<script src="/static/js/gallery/audio.js"></script>
+<script src="static/js/third-party/threejs/three.min.js"></script>
+<script src="static/js/third-party/threejs/StereoEffect.js"></script>
+<script src="static/js/third-party/threejs/DeviceOrientationControls.js"></script>
+<script src="static/js/third-party/threejs/OrbitControls.js"></script>
+<script src="static/js/third-party/jquery.js"></script>
+<script src="static/js/third-party/has.js"></script>
+<script src="static/js/DetectScreenSize.js"></script>
+<script src="static/js/Kaikai.js"></script>
+<script src="static/js/gallery/audio.js"></script>
 
 <script>
+
+var back = {
+  'slug': 'back',
+  'href': '#',
+  'preview': 'static/img/back.png'
+};
+
 var DEMOS = [
   {
-    'slug': 'shop',
+    'slug': 'shop1',
     'href': '#',
-    'preview': '/static/img/paper-bag.svg'
+    'preview': 'static/img/paper-bag.svg'
   },
   {
-    'slug': 'compass',
+    'slug': 'compass1',
     'href': '#',
-    'preview': '/static/img/compas.svg'
+    'preview': 'static/img/compas.svg'
   },
   {
-    'slug': 'smiley',
+    'slug': 'smiley1',
     'href': '#',
-    'preview': '/static/img/gift-box.svg'
+    'preview': 'static/img/gift-box.svg'
+  },
+  {
+    'slug': 'shop2',
+    'href': '#',
+    'preview': 'static/img/paper-bag.svg'
+  },
+  {
+    'slug': 'compass2',
+    'href': '#',
+    'preview': 'static/img/compas.svg'
+  },
+  {
+    'slug': 'smiley2',
+    'href': '#',
+    'preview': 'static/img/gift-box.svg'
+  },
+  {
+    'slug': 'shop3',
+    'href': '#',
+    'preview': 'static/img/paper-bag.svg'
+  },
+  {
+    'slug': 'compass3',
+    'href': '#',
+    'preview': 'static/img/compas.svg'
+  },
+  {
+    'slug': 'smiley3',
+    'href': '#',
+    'preview': 'static/img/gift-box.svg'
   },
 ];
 </script>
 
 <script src="/static/js/util.js"></script>
-<script src="/static/js/gallery/main.js"></script>
 
-<script>
-
-// add no sleep
-
-// add full screen
-
-// initialize the screen
-
-
-var kaikai, gallery, cursor;
-var STEREO = (window.location.hash == "#stereo") ? true : false;
-
-function setup() {
-
-  kaikai = new Kaikai();
-
-  gallery = new Gallery(DEMOS);
-  kaikai.scene.add(gallery);
-
-  cursor = new Cursor();
-  kaikai.camera.add(cursor);
-  cursor.position.z = -3 * SCALE;
-  cursor.lookAt(kaikai.camera.position);
-
-  if (STEREO) {
-    kaikai.effect.separation = 0.6;
-  }
-
-  if (!has.mobile) {
-    setTimeout(function() {
-      kaikai.orbitControls.target.set(0,0.3,1);
-    },0);
-  }
-
-  kaikai.update = function() {
-    Kaikai.prototype.update.call(this);
-    gallery.update();
-  };
-
-  document.getElementById('scene').appendChild(kaikai.renderer.domElement);
-
-}
-
-
-setup();
-
-</script>
+<script src="/static/js/main.js"></script>
 
 </body>
 </html>
