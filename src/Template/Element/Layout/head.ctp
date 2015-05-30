@@ -11,6 +11,9 @@ use Cake\Core\Configure;
     <meta name="mobile-web-app-capable" content="yes">
     <?= $this->fetch('meta') ?>
     <title><?= $this->fetch('title') ?> - <?= Configure::read('Site.name') ?></title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
