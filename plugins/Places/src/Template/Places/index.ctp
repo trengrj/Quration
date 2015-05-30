@@ -1,6 +1,8 @@
 <div id="scene"></div>
 <div id="shade"></div>
 <?php
+use Cake\Routing\Router;
+
 foreach ($places as $p) {
     $p->image_url = $p->place_images
         ? $this->Image->imageUrl($p->place_images[0], 'small')
@@ -11,7 +13,7 @@ foreach ($places as $p) {
 <script>
     var places = <?= json_encode($places) ?>;
 
-    BACK = null;
+    BACK.href = '<?= Router::url(['action' => 'categories'], true) ?>';
 
     var DEMOS = [];
     for (var i in places) {

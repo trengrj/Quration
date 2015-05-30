@@ -10,6 +10,17 @@ use Places\Controller\AppController;
  */
 class PlacesController extends AppController
 {
+    public function categories()
+    {
+        $categories = $this->loadModel('Categories.Categories')
+            ->find('all')
+            ->contain(['CategoryImages'])
+            ->order(['pos']);
+
+        $this->set(compact('categories'));
+        $this->set('_serialize', ['categories']);
+    }
+
     public function index($categoryId = null)
     {
         $places = $this->loadModel('Places.Places')

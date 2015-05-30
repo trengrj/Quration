@@ -53,13 +53,13 @@ var SCALE = 3;
 
     function addDemos(demos) {
         this.intersectables = [];
-        var hl = 1.25;
+        var hl = 2.9;
         for (var i = 0; i < demos.length; i++) {
             var demo = new Demo(demos[i]);
             window.demo = demo;
-            var theta = (i + hl) * 0.3;
+            var theta = (i + hl) * 0.4;
             demo.position.x = RADIUS * Math.cos(theta);
-            demo.position.z = 5 + RADIUS * Math.sin(theta);
+            demo.position.z = 1 + RADIUS * Math.sin(theta);
             demo.position.y = -2;
             demo.lookAt(kaikai.camera.position);
             this.add(demo);
