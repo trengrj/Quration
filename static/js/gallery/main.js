@@ -171,8 +171,8 @@ var SCALE = 3;
             found.object.scale.set(1.2, 1.2, 1.2);
             found.object.position.z = 0.1;
             if (!this.selected) {
-                this.selectSound();
-                window.navigator.vibrate(30);
+                //this.selectSound();
+                //window.navigator.vibrate(30);
                 this.selected = { id: found.object.uuid, ttl: TTL, obj: found.object };
             } else {
                 if (this.selected.id == found.object.uuid) {
@@ -187,8 +187,8 @@ var SCALE = 3;
                         // cursor.scale.set(0,0,0);
                     }
                 } else {
-                    this.selectSound();
-                    window.navigator.vibrate(30);
+                    //this.selectSound();
+                    //window.navigator.vibrate(30);
                     this.selected = { id: found.object.uuid, ttl: TTL, obj: found.object };
                 }
             }
@@ -204,8 +204,8 @@ var SCALE = 3;
         if (this.open.opening) {
             return;
         }
-        this.openSound();
-        window.navigator.vibrate(100);
+        ////////////////this.openSound();
+        //window.navigator.vibrate(100);
         shade.style.backgroundColor = 'rgba(0,0,0,1)';
         this.open.opening = true;
         setTimeout(function() {
