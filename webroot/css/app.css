@@ -37,3 +37,53 @@ body.stereo .info {
     height: 150px;
     z-index: 9999;
 }
+
+@font-face {
+    font-family: 'Flama-Light';
+    src: url('../fonts/flama-light-webfont.eot');
+    src: url('../fonts/flama-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/flama-light-webfont.woff') format('woff'),
+    url('../fonts/flama-light-webfont.ttf') format('truetype'),
+    url('../fonts/flama-light-webfont.svg#flamalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.modal {
+    font-family: 'Flama-Light';
+    margin-top: 100px;
+    font-size: 24px;
+    border-radius:5px;
+}
+.modal-dialog {
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.27), 0px 6px 16px 0px rgba(0,0,0,0.24);
+    border-radius:5px;
+}
+.modal .modal-content {
+    background: -moz-radial-gradient(circle, #FFFFFF, #C0C0C0);
+    background: -webkit-radial-gradient(circle, #FFFFFF, #C0C0C0);
+}
+.modal .btn-primary {
+    background-color: #e0001b;
+    border: 0px;
+    height: 2.5em;
+    margin-top:0px;
+    margin-bottom:40px;
+    font-size:18px;
+}
+.modal hr {
+    max-width: 250px;
+}
+.modal-header {
+    border-bottom: 0px;
+    margin-top:5px;
+}
+
+.grow {
+    transition: all 2.5s ease-in-out;
+    -webkit-transition: all 2.5s ease-in-out;
+}
+.grow-big {
+    transform: scale(4.0);
+    -webkit-transform: scale(4.0);
+    pointer-events: none;
+}

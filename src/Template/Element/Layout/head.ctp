@@ -8,6 +8,7 @@ use Cake\Core\Configure;
     <?= $this->Html->charset() ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
     <?= $this->fetch('meta') ?>
     <title><?= $this->fetch('title') ?> - <?= Configure::read('Site.name') ?></title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
