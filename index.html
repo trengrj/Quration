@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Kaikai</title>
+	<title>Quration</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
@@ -60,8 +60,6 @@
 <div id="scene"></div>
 <div id="shade"></div>
 
-<!-- <script> window.history.replaceState({},"","/"); </script> -->
-
 <script src="/static/js/third-party/threejs/three.min.js"></script>
 <script src="/static/js/third-party/threejs/StereoEffect.js"></script>
 <script src="/static/js/third-party/threejs/DeviceOrientationControls.js"></script>
@@ -97,6 +95,7 @@ var DEMOS = [
 
 
 var kaikai, gallery, cursor;
+var STEREO = (window.location.hash == "#stereo") ? true : false;
 
 function setup() {
 
@@ -110,7 +109,9 @@ function setup() {
   cursor.position.z = -3 * SCALE;
   cursor.lookAt(kaikai.camera.position);
 
-  kaikai.effect.separation = 0.6;
+  if (STEREO) {
+    kaikai.effect.separation = 0.6;
+  }
 
   if (!has.mobile) {
     setTimeout(function() {

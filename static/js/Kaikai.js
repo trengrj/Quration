@@ -4,7 +4,9 @@ function Kaikai() {
   this.renderer.setSize(window.innerWidth, window.innerHeight);
 
   this.scene = new THREE.Scene();
-  this.effect = new THREE.StereoEffect(this.renderer);
+  if (STEREO) {
+    this.effect = new THREE.StereoEffect(this.renderer);
+  }
 
   this.camera = new THREE.PerspectiveCamera(
     90, window.innerWidth / window.innerHeight, 0.001, 700
@@ -75,7 +77,13 @@ Kaikai.prototype.update = function() {
 };
 
 Kaikai.prototype.render = function() {
+  if (STEREO) {
     this.effect.render(this.scene, this.camera);
+  }
+  else {
+    this.renderer.render(this.scene, this.camera);
+  }
+
 };
 
 Kaikai.prototype.fullscreen = function() {
@@ -96,5 +104,7 @@ Kaikai.prototype.resize = function() {
   this.camera.aspect = this.width / this.height;
   this.camera.updateProjectionMatrix();
   this.renderer.setSize(this.width, this.height);
-  this.effect.setSize(this.width, this.height);
+  if (STEREO) {
+    this.effect.setSize(this.width, this.height);
+  }
 };
