@@ -19,7 +19,7 @@ foreach ($places as $p) {
     for (var i in places) {
         DEMOS.push({
             'slug': 'slug' + i,
-            'href': $('base').attr('href') + 'places/places/view/' + places[i]['id'],
+            'href': $('base').attr('href') + 'places/Places/view/' + places[i]['id'],
             'preview': $('base').attr('href') + places[i]['image_url']
         });
     }

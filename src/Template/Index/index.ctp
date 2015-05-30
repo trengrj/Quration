@@ -33,7 +33,7 @@ foreach ($categories as $c) {
     for (var i in categories) {
         DEMOS.push({
             'slug': 'slug' + i,
-            'href': $('base').attr('href') + 'places/places/index/' + categories[i]['id'],
+            'href': $('base').attr('href') + 'places/Places/index/' + categories[i]['id'],
             'preview': $('base').attr('href') + categories[i]['image_url']
         });
     }

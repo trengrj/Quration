@@ -199,7 +199,11 @@ var SCALE = 3;
     };
 
     root.openDemo = function (demo) {
-        window.location.href = demo.href;
+        var url = demo.href;
+        if (typeof(TYPE) != 'undefined' && TYPE != null) {
+            url += '?type=' + TYPE;
+        }
+        window.location.href = url;
     };
 
     Gallery.prototype.update = function () {
