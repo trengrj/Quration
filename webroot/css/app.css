@@ -24,3 +24,12 @@ body {
     .info p {
         margin: 0;
     }
+
+#trigger {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    height: 150px;
+    z-index: 9999;
+}
