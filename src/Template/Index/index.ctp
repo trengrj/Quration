@@ -159,7 +159,7 @@ foreach ($categories as $c) {
 
     var SCENE = 'static/photospheres/sky.jpg';
 
-    <?php if (Configure::read('debug')): ?>
+    <?php if (Configure::read('debug') || isset($this->request->query['demo'])): ?>
     $(function(){
         var currentModal = 1;
         $("#mm"+currentModal).modal();

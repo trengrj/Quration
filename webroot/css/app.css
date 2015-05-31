@@ -87,3 +87,7 @@ body.stereo .info {
     -webkit-transform: scale(4.0);
     pointer-events: none;
 }
+
+body.stereo .grow {
+    display: none;
+}
