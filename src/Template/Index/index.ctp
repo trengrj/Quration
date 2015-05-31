@@ -132,6 +132,8 @@
 </div><!-- /.modal -->
 
 <?php
+use Cake\Core\Configure;
+
 foreach ($categories as $c) {
     $c->image_url = $c->category_images
         ? $this->Image->imageUrl($c->category_images[0])
@@ -157,16 +159,20 @@ foreach ($categories as $c) {
 
     var SCENE = 'static/photospheres/sky.jpg';
 
-    var currentModal = 1;
-    $("#mm"+currentModal).modal();
-    $(".modal button").click(function() {
-        $("#mm"+currentModal).modal('hide');
-        currentModal += 1;
-        if (currentModal >= 5) {
-            return;
-        }
-        $("#mm"+currentModal).modal('show');
+    <?php if (Configure::read('debug')): ?>
+    $(function(){
+        var currentModal = 1;
+        $("#mm"+currentModal).modal();
+        $(".modal button").click(function() {
+            $("#mm"+currentModal).modal('hide');
+            currentModal += 1;
+            if (currentModal >= 5) {
+                return;
+            }
+            $("#mm"+currentModal).modal('show');
+        });
     });
+    <?php endif; ?>
 
     $('.grow').click(function(){
         $(".grow").toggleClass("grow-big");

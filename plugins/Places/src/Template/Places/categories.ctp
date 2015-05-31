@@ -22,6 +22,6 @@ foreach ($categories as $c) {
         });
     }
 
-    var SCENE = 'static/photospheres/hangar.jpg';
+    var SCENE = 'static/photospheres/sky.jpg';
 </script>
 <?php $this->end(); ?>

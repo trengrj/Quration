@@ -24,6 +24,6 @@ foreach ($places as $p) {
         });
     }
 
-    var SCENE = 'static/photospheres/hangar.jpg';
+    var SCENE = 'static/photospheres/sky.jpg';
 </script>
 <?php $this->end(); ?>

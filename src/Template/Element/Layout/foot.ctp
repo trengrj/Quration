@@ -3,18 +3,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <?php
 $this->append('script', $this->Html->script([
+    //'jquery-2.1.3.min',
+    //'bootstrap.min',
     'threejs/three.min',
     'threejs/StereoEffect',
     'threejs/DeviceOrientationControls',
     'threejs/OrbitControls',
-    'screenfull.min',
     'has',
     'DetectScreenSize',
     'Kaikai',
     'audio',
     'util',
     'main',
-    'app',
+    //'app',
 ]));
 ?>
 
