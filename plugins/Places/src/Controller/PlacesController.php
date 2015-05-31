@@ -26,7 +26,7 @@ class PlacesController extends AppController
         $places = $this->loadModel('Places.Places')
             ->find('all')
             ->contain(['PlaceImages', 'PlaceScenes', 'Categories'])
-            ->order(['id'])
+            ->order(['Places.id'])
             ->limit(5);
 
         if ($categoryId) {
