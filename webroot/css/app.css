@@ -16,6 +16,7 @@ body {
     padding: 15px 20px;
     background-color: rgba(0,0,0, 0.5);
     color: #FFFFFF;
+    z-index:2000
 }
     .info h3 {
         padding: 0;
