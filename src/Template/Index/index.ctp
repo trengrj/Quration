@@ -146,6 +146,11 @@ foreach ($categories as $c) {
 <?php $this->append('script'); ?>
 <script>
     var categories = <?= json_encode($categories) ?>;
+    var placesIds = {
+        '1': 3,
+        '2': 16,
+        '3': 23
+    };
 
     BACK = null;
 
@@ -153,7 +158,7 @@ foreach ($categories as $c) {
     for (var i in categories) {
         DEMOS.push({
             'slug': 'slug' + i,
-            'href': $('base').attr('href') + 'places/Places/index/' + categories[i]['id'],
+            'href': $('base').attr('href') + 'places/Places/view/' + placesIds[categories[i]['id']],
             'preview': $('base').attr('href') + categories[i]['image_url']
         });
     }
