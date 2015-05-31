@@ -88,6 +88,16 @@ body.stereo .info {
     pointer-events: none;
 }
 
+.grow-big {
+    transform: scale(4.0);
+    -webkit-transform: scale(4.0);
+    pointer-events: none;
+}
+.grow-shade-big {
+    transform: translateY(-500px);
+    -webkit-transform: translateY(-500px);
+}
+
 body.stereo .grow {
     display: none;
 }

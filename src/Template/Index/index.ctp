@@ -2,6 +2,7 @@
 <div id="shade"></div>
 
 <img class="grow" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1000;" src="img/CabinInterior.png">
+<img class="grow-shade grow" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:999;" src="img/CabinInteriorSlide8.png">
 
 <div id="mm1" class="modal fade">
     <div class="modal-dialog">
@@ -174,8 +175,15 @@ foreach ($categories as $c) {
     });
     <?php endif; ?>
 
+    var shutter = false;
     $('.grow').click(function(){
+      if (!shutter) {
+        $(".grow-shade").addClass("grow-shade-big");
+        shutter = true;
+      }
+      else {
         $(".grow").toggleClass("grow-big");
+      }
     });
 </script>
 <?php $this->end(); ?>
