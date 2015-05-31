@@ -95,8 +95,8 @@ body.stereo .info {
     pointer-events: none;
 }
 .grow-shade-big {
-    transform: translateY(-500px);
-    -webkit-transform: translateY(-500px);
+    transform: translateY(-800px);
+    -webkit-transform: translateY(-800px);
 }
 
 body.stereo .grow {
